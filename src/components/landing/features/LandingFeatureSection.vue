@@ -1,32 +1,19 @@
 <template>
   <section>
     <h2 class="text-left">Создавайте<br />качественный контент</h2>
-    <VRow>
-      <VCol
-        v-for="feature in features"
-        :key="feature.title"
-        cols="12"
-        sm="6"
-        md="3"
-      >
+    <div>
+      <div v-for="feature in features" :key="feature.title">
         <LandingFeature :feature="feature" />
-      </VCol>
-    </VRow>
-    <VBtn
-      rounded
-      height="56"
-      color="primary"
-      elevation="0"
-      class="text-button font-weight-bold text-none"
-    >
-      Попробовать бесплатно
-    </VBtn>
+      </div>
+    </div>
+    <CommonButton rounded> Попробовать бесплатно </CommonButton>
   </section>
 </template>
 
 <script setup lang="ts">
+import CommonButton from "@/components/ui/button/CommonButton.vue";
 import LandingFeature from "./LandingFeature.vue";
-import { features } from "./constants.js";
+import { features } from "./constants";
 </script>
 
 <style lang="scss"></style>
