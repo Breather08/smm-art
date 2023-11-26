@@ -30,7 +30,7 @@ const iconSrc = computed(() => `/src/components/ui/icon/store/i-${props.name}.sv
 
 <style lang="scss">
 .ds-icon {
-  display: inline-block;
+  display: flex;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
