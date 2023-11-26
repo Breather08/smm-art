@@ -2,7 +2,7 @@
   <button
     v-bind="$attrs"
     :class="[
-      `common-button--${variant}`,
+      `common-button common-button--${variant} py-2 px-8`,
       {
         'common-button--rounded': rounded,
       },
@@ -17,28 +17,33 @@ import type { Variant } from "./types";
 
 interface Props {
   rounded: boolean;
-  variant: Variant;
+  variant?: Variant;
 }
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), { variant: "primary" });
 </script>
 
 <style lang="scss">
 .common-button {
   padding: 8px 32px;
   border: 0;
+  outline: none;
   background: none;
-  height: 56px;
+  min-height: 56px;
+  font-weight: 600;
 
   &--rounded {
-    border-radius: 56px;
+    border-radius: 50px;
   }
 
   &--primary {
+    color: white;
     background-color: theme("colors.primary");
   }
 
   &--secondary {
+    color: #171740;
+    background-color: #fafafa;
   }
 
   &--plain {

@@ -1,14 +1,9 @@
 <template>
   <section class="text-left">
     <LandingPricingCurrency @change="onCurrencyChange"></LandingPricingCurrency>
-    <v-row class="py-12 px-4" align-content="center">
-      <v-col
-        v-for="(pricing, period) in periodPricings"
-        :key="period"
-        cols="12"
-        sm="4"
-      >
-        <v-card
+    <div class="py-12" align-content="center">
+      <div v-for="(pricing, period) in periodPricings" :key="period" cols="12" sm="4">
+        <div
           rounded="xl"
           class="py-6 px-8"
           :class="{
@@ -16,41 +11,29 @@
             'text-white bg-primary': pricing.isMostPopular,
           }"
         >
-          <v-card color="info" width="max-content" class="text-uppercase px-4">
-            Выгодно
-          </v-card>
+          <div color="info" width="max-content" class="text-uppercase px-4">Выгодно</div>
           <h4>{{ pricing.title }}</h4>
           <div class="my-4">
             <h4>
               {{ pricing.sum }}
-              <span class="text-h5">
-                / {{ pricing.title.toLocaleLowerCase() }}
-              </span>
+              <span class="text-h5"> / {{ pricing.title.toLocaleLowerCase() }} </span>
             </h4>
           </div>
           <ul class="py-4">
-            <li v-for="feature in pricing.features">
+            <li v-for="feature in pricing.features" :key="feature.description">
               {{ feature.isAvailable }}
               {{ feature.description }}
             </li>
           </ul>
-          <v-btn
-            rounded="lg"
-            height="56"
-            color="secondary-darken-1"
-            elevation="0"
-            width="100%"
-            class="text-button font-weight-bold text-none"
-          >
-            Получить
-          </v-btn>
-        </v-card>
-      </v-col>
-    </v-row>
+          <CommonButton rounded class=""> Получить </CommonButton>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import CommonButton from "@/components/ui/button/CommonButton.vue";
 import LandingPricingCurrency from "./LandingPricingCurrency.vue";
 import { Currency, Period, PeriodPricing } from "./constants";
 

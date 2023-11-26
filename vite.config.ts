@@ -8,7 +8,7 @@ export default defineConfig(() => {
 
   return {
     envDir,
-    base: "/your/baseurl",
+    base: "/",
     plugins: [vue()],
     resolve: {
       alias: {

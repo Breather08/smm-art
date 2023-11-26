@@ -1,10 +1,8 @@
 <template>
-  <section>
+  <section class="py-8">
     <h2 class="text-left">Создавайте<br />качественный контент</h2>
     <div>
-      <div v-for="feature in features" :key="feature.title">
-        <LandingFeature :feature="feature" />
-      </div>
+      <LandingFeature v-for="feature in features" :key="feature.title" :feature="feature" />
     </div>
     <CommonButton rounded> Попробовать бесплатно </CommonButton>
   </section>

@@ -1,0 +1,39 @@
+<template>
+  <i
+    class="ds-icon"
+    :class="color"
+    :style="{
+      maskImage: `url(${iconSrc})`,
+      backgroundColor: color,
+      width: `${size}px`,
+      height: `${size}px`,
+    }"
+  ></i>
+</template>
+
+<script setup lang="ts">
+import { computed } from "vue";
+
+interface IProps {
+  name: string;
+  color?: string;
+  size?: number;
+}
+
+const props = withDefaults(defineProps<IProps>(), {
+  color: "#5555FF",
+  size: 24,
+});
+
+const iconSrc = computed(() => `/src/components/ui/icon/store/i-${props.name}.svg`);
+</script>
+
+<style lang="scss">
+.ds-icon {
+  display: inline-block;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+</style>

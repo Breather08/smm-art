@@ -1,7 +1,8 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <article class="pa-4 text-center">
-    <div class="pb-4">
-      {{ feature.icon }}
+    <div class="mb-4 bg-secondary inline-block p-5 rounded-full">
+      <i v-html="feature.icon"></i>
     </div>
     <h5 class="pt-2 px-4">
       {{ feature.title }}
