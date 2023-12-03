@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<IProps>(), {
   size: 24,
 });
 
-const iconSrc = computed(() => `/src/components/ui/icon/store/i-${props.name}.svg`);
+const iconSrc = computed(() => `/src/assets/icons/i-${props.name}.svg`);
 </script>
 
 <style lang="scss">

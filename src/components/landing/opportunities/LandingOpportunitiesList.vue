@@ -5,7 +5,7 @@
       :key="op.title"
       class="w-full h-full rounded-2xl relative overflow-hidden"
       :style="{
-        height: '394px',
+        height: '448px',
         backgroundColor: '#eeecf9',
       }"
     >

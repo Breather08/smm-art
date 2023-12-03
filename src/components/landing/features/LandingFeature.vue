@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <article class="pa-4 text-center">
+  <article class="p-4 text-center">
     <div class="mb-4 bg-secondary inline-block p-5 rounded-full">
       <CommonIcon :name="feature.icon"></CommonIcon>
     </div>
