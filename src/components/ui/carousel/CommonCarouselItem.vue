@@ -5,7 +5,6 @@
       width: `${width}px`,
     }"
   >
-    {{ width }}
     <slot></slot>
   </div>
 </template>
