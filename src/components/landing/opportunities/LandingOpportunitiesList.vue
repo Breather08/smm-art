@@ -1,11 +1,12 @@
 <template>
-  <div class="flex flex-col gap-y-8">
+  <div class="flex flex-wrap gap-y-8">
     <article
       v-for="op in opportunities"
       :key="op.title"
       class="w-full h-full rounded-2xl relative overflow-hidden"
       :style="{
         height: '448px',
+        maxWidth: '380px',
         backgroundColor: '#eeecf9',
       }"
     >

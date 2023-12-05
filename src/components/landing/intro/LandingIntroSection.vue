@@ -14,28 +14,12 @@
         <CommonButton variant="secondary" rounded> Запись на демонстрацию </CommonButton>
       </div>
       <div class="flex justify-between">
-        <div class="flex">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6 11L11 16L19 8" stroke="#5555FF" stroke-width="2" stroke-linecap="round" />
-          </svg>
+        <div class="flex items-center">
+          <CommonIcon name="check" />
           <span class="ml-2">7 дней бесплатно</span>
         </div>
-        <div class="flex">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M6 11L11 16L19 8" stroke="#5555FF" stroke-width="2" stroke-linecap="round" />
-          </svg>
+        <div class="flex items-center">
+          <CommonIcon name="check" />
           <span class="ml-2">Можно без карты</span>
         </div>
       </div>
@@ -45,6 +29,7 @@
 
 <script setup lang="ts">
 import CommonButton from "@/components/ui/button/CommonButton.vue";
+import CommonIcon from "@/components/ui/icon/CommonIcon.vue";
 </script>
 
 <style lang="scss"></style>

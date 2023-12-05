@@ -2,52 +2,35 @@
   <button
     v-bind="$attrs"
     :class="[
-      `common-button common-button--${variant} py-2 px-8`,
+      `py-2 px-8 h-14 text-main`,
       {
-        'common-button--rounded': rounded,
+        'bg-primary text-white': variant === 'primary',
+        'bg-back-grey': variant === 'secondary',
+        'bg-transparent': variant === 'plain',
+        'rounded-full': rounded,
+        'rounded-lg': !rounded,
+        'w-full': full,
+        'rounded-50': icon,
       },
     ]"
+    @click="$emit('click')"
   >
-    <slot></slot>
+    <CommonIcon v-if="icon" :name="icon" />
+    <slot v-else></slot>
   </button>
 </template>
 
 <script setup lang="ts">
+import CommonIcon from "../icon/CommonIcon.vue";
 import type { Variant } from "./types";
 
 interface Props {
-  rounded: boolean;
+  rounded?: boolean;
   variant?: Variant;
+  full?: boolean;
+  icon?: string;
 }
 
-withDefaults(defineProps<Props>(), { variant: "primary" });
+defineEmits<{ (name: "click"): void }>();
+withDefaults(defineProps<Props>(), { variant: "primary", rounded: false, full: false, icon: "" });
 </script>
-
-<style lang="scss">
-.common-button {
-  padding: 8px 32px;
-  border: 0;
-  outline: none;
-  background: none;
-  min-height: 56px;
-  font-weight: 600;
-
-  &--rounded {
-    border-radius: 50px;
-  }
-
-  &--primary {
-    color: white;
-    background-color: theme("colors.primary");
-  }
-
-  &--secondary {
-    color: #171740;
-    background-color: #fafafa;
-  }
-
-  &--plain {
-    background-color: transparent;
-  }
-}
-</style>

@@ -1,46 +1,54 @@
 <template>
-  <section class="text-left">
-    <LandingPricingCurrency @change="onCurrencyChange"></LandingPricingCurrency>
-    <div class="py-12" align-content="center">
-      <div v-for="(pricing, period) in periodPricings" :key="period" cols="12" sm="4">
-        <div
-          rounded="xl"
-          class="py-6 px-8"
-          :class="{
-            'mb-6': period !== 'week',
-            'text-white bg-primary': pricing.isMostPopular,
-          }"
-        >
-          <div color="info" width="max-content" class="text-uppercase px-4">Выгодно</div>
-          <h4>{{ pricing.title }}</h4>
-          <div class="my-4">
-            <h4>
-              {{ pricing.sum }}
-              <span class="text-h5"> / {{ pricing.title.toLocaleLowerCase() }} </span>
-            </h4>
+  <section class="bg-secondary-light">
+    <h2 class="mb-6">Попробуйте 7 дней бесплатно</h2>
+    <p class="text-left text-main-grey">
+      У Вас есть возможность опробовать функциональный инструмент для ведения соцсетей
+    </p>
+    <CommonMenu v-model="currencyModel">
+      <CommonMenuItem>
+        <div class="flex gap-2">
+          <div class="w-8 h-8 rounded-full overflow-hidden">
+            <img class="w-full h-full" src="@/assets/images/flags/currency_flag_kz.png" />
           </div>
-          <ul class="py-4">
-            <li v-for="feature in pricing.features" :key="feature.description">
-              {{ feature.isAvailable }}
-              {{ feature.description }}
-            </li>
-          </ul>
-          <CommonButton rounded class=""> Получить </CommonButton>
+          <span class="flex items-center">KZT</span>
         </div>
-      </div>
+      </CommonMenuItem>
+      <CommonMenuItem>
+        <div class="flex gap-2">
+          <div class="w-8 h-8 rounded-full overflow-hidden">
+            <img class="w-full h-full" src="@/assets/images/flags/currency_flag_us.png" />
+          </div>
+          <span class="flex items-center">USD</span>
+        </div>
+      </CommonMenuItem>
+      <CommonMenuItem>
+        <div class="flex gap-2">
+          <div class="w-8 h-8 rounded-full overflow-hidden">
+            <img class="w-full h-full" src="@/assets/images/flags/currency_flag_ru.png" />
+          </div>
+          <span class="flex items-center">RUB</span>
+        </div>
+      </CommonMenuItem>
+    </CommonMenu>
+    <div class="py-12 flex flex-wrap gap-6">
+      <LandingPricingCard v-for="pricing in periodPricings" :key="pricing.title" :data="pricing" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import CommonButton from "@/components/ui/button/CommonButton.vue";
-import LandingPricingCurrency from "./LandingPricingCurrency.vue";
-import { Currency, Period, PeriodPricing } from "./constants";
+import { ref } from "vue";
+import CommonMenu from "@/components/ui/menu/CommonMenu.vue";
+import CommonMenuItem from "@/components/ui/menu/CommonMenuItem.vue";
+// import CommonButton from "@/components/ui/button/CommonButton.vue"
+import type { PeriodPricing } from "./types";
+import LandingPricingCard from "./LandingPricingCard.vue";
 
-const periodPricings: Record<Period, PeriodPricing> = {
-  day: {
+const periodPricings: PeriodPricing[] = [
+  {
     title: "День",
-    sum: 2000,
+    sum: "2 000 тг",
+    period: "day",
     features: [
       {
         description: "Feature",
@@ -56,9 +64,10 @@ const periodPricings: Record<Period, PeriodPricing> = {
       },
     ],
   },
-  month: {
+  {
     title: "Месяц",
-    sum: 20000,
+    sum: "20 000 тг",
+    period: "month",
     isMostPopular: true,
     features: [
       {
@@ -75,9 +84,10 @@ const periodPricings: Record<Period, PeriodPricing> = {
       },
     ],
   },
-  week: {
+  {
     title: "Неделя",
-    sum: 10000,
+    sum: "10 000 тг",
+    period: "week",
     features: [
       {
         description: "Feature",
@@ -93,11 +103,8 @@ const periodPricings: Record<Period, PeriodPricing> = {
       },
     ],
   },
-};
-
-function onCurrencyChange(currency: Currency) {
-  console.log(currency);
-}
+];
+const currencyModel = ref(0);
 </script>
 
 <style lang="scss" scoped>

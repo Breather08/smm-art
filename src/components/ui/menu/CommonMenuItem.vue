@@ -14,11 +14,14 @@ const index = ref(0);
 
 defineProps<IProps>();
 const slots = useSlots();
-const { setActive, incrementCount, count } = inject(menuInjectionKey);
+const { setActive, incrementCount, count, initial } = inject(menuInjectionKey);
 
 onMounted(() => {
   console.log("on mounted");
   index.value = count.value;
   incrementCount();
+  if (initial === index.value) {
+    setActive(index.value, slots.default()[0]);
+  }
 });
 </script>

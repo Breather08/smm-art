@@ -100,3 +100,7 @@ ul,
 ol {
   list-style: none;
 }
+
+.rounded-50 {
+  border-radius: 50%;
+}

@@ -9,9 +9,11 @@ const config = {
         primary: "#5555FF",
         secondary: "#DDDDFF",
         "secondary-light": "#F1F1FF",
+        "main-grey": "#6F6F6F",
         accent: "#FCE93B",
         tertiary: "#FFFFFF",
         main: "#242464",
+        "back-grey": "#fafafa",
       },
     },
     typography: {

@@ -1,16 +1,22 @@
 <template>
   <div class="relative flex justify-end">
     <button
-      class="bg-white rounded-lg p-3 flex gap-2 items-center"
+      class="bg-white rounded-lg p-3 flex gap-2 items-center shadow"
       @focusin="showMenu"
       @focusout.stop="hideMenu"
     >
       <current />
-      <CommonIcon name="chevron-down"></CommonIcon>
+      <CommonIcon
+        name="chevron-down"
+        class="transition-transform"
+        :style="{
+          transform: `rotate(${isActive ? '180deg' : '0'})`,
+        }"
+      ></CommonIcon>
     </button>
     <ul
       v-show="isActive"
-      class="absolute top-full rounded-lg bg-white overflow-hidden p-3 flex flex-col gap-3"
+      class="absolute top-full shadow-md rounded-lg bg-white overflow-hidden p-3 flex flex-col gap-3"
     >
       <slot></slot>
     </ul>
@@ -18,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-// import CommonMenuItem from "./CommonMenuItem.vue";
 import { VNode, h, provide, ref, onMounted } from "vue";
 import { menuInjectionKey } from "./constants";
 import CommonIcon from "../icon/CommonIcon.vue";
@@ -30,12 +35,13 @@ interface IProps {
 const count = ref(0);
 const isActive = ref(false);
 
-defineProps<IProps>();
+const props = defineProps<IProps>();
 const emit = defineEmits<{ (name: "update:modelValue", index: number): void }>();
 
 const current = ref(() => h("div", ""));
 
 provide(menuInjectionKey, {
+  initial: props.modelValue,
   count: count,
   incrementCount() {
     count.value++;
