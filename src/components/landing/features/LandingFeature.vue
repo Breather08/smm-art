@@ -2,7 +2,7 @@
 <template>
   <article class="p-4 text-center">
     <div class="mb-4 bg-secondary inline-block p-5 rounded-full">
-      <CommonIcon :name="feature.icon"></CommonIcon>
+      <UiIcon :name="feature.icon"></UiIcon>
     </div>
     <h5 class="pt-2 px-4">
       {{ feature.title }}
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import CommonIcon from "@/components/ui/icon/UiIcon.vue";
+import UiIcon from "@/components/ui/icon/UiIcon.vue";
 import type { Feature } from "./types";
 
 defineProps<{ feature: Feature }>();

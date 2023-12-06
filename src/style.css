@@ -23,10 +23,6 @@ body {
   min-height: 100vh;
 }
 
-#app {
-  max-width: 1200px;
-}
-
 h1,
 h2 {
   text-align: left;
@@ -78,7 +74,6 @@ h5 {
 }
 
 #app {
-  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }

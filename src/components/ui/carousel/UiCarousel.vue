@@ -20,14 +20,14 @@
     </div>
     <div class="flex gap-7 justify-center">
       <button class="bg-secondary rounded-full relative w-12 h-12" @click="prevPage">
-        <CommonIcon
+        <UiIcon
           class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           name="chevron-left"
           color="#5555FF"
         />
       </button>
       <button class="bg-secondary rounded-full relative w-12 h-12" @click="nextPage">
-        <CommonIcon
+        <UiIcon
           class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           name="chevron-right"
           color="#5555FF"
@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { onMounted, provide, ref } from "vue";
-import CommonIcon from "../icon/UiIcon.vue";
+import UiIcon from "../icon/UiIcon.vue";
 import { carouselInjectionKey } from "./constants";
 
 const carouselRef = ref<HTMLElement | null>(null);

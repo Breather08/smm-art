@@ -1,11 +1,12 @@
 <template>
+  <UiNavbar :links="links"></UiNavbar>
   <main>
-    <LandingIntro class="px-4 md:px-10 lg:px-30"></LandingIntro>
-    <LandingClients class="px-4 md:px-10 lg:px-30"></LandingClients>
-    <LandingOpportunities class="px-4 md:px-10 lg:px-30"></LandingOpportunities>
-    <LandingFeature class="px-4 md:px-10 lg:px-30"></LandingFeature>
-    <LandingPricing class="px-4 md:px-10 lg:px-30"></LandingPricing>
-    <LandingReviews class="px-4 md:px-10 lg:px-30"></LandingReviews>
+    <LandingIntro></LandingIntro>
+    <LandingClients></LandingClients>
+    <LandingOpportunities></LandingOpportunities>
+    <LandingFeature></LandingFeature>
+    <LandingPricing></LandingPricing>
+    <LandingReviews></LandingReviews>
   </main>
 </template>
 
@@ -16,6 +17,31 @@ import LandingIntro from "./components/landing/intro/LandingIntroSection.vue";
 import LandingOpportunities from "./components/landing/opportunities/LandingOpportunities.vue";
 import LandingPricing from "./components/landing/pricing/LandingPricingSection.vue";
 import LandingReviews from "./components/landing/reviews/LandingReviewsSection.vue";
+import UiNavbar from "./components/ui/navbar/UiNavbar.vue";
+import type { Link } from "@/components/ui/navbar/types";
+
+const links: Link[] = [
+  {
+    text: "О нас",
+    url: "",
+  },
+  {
+    text: "Тарифы",
+    url: "",
+  },
+  {
+    text: "Приложение",
+    url: "",
+  },
+  {
+    text: "Инструменты",
+    url: "",
+  },
+  {
+    text: "Контакты",
+    url: "",
+  },
+];
 </script>
 
 <style lang="scss"></style>

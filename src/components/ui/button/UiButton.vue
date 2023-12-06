@@ -15,13 +15,13 @@
     ]"
     @click="$emit('click')"
   >
-    <CommonIcon v-if="icon" :name="icon" />
+    <UiIcon v-if="icon" :name="icon" />
     <slot v-else></slot>
   </button>
 </template>
 
 <script setup lang="ts">
-import CommonIcon from "../icon/UiIcon.vue";
+import UiIcon from "../icon/UiIcon.vue";
 import type { Variant } from "./types";
 
 interface Props {

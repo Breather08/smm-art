@@ -6,13 +6,13 @@
       @focusout.stop="hideMenu"
     >
       <current />
-      <CommonIcon
+      <UiIcon
         name="chevron-down"
         class="transition-transform"
         :style="{
           transform: `rotate(${isActive ? '180deg' : '0'})`,
         }"
-      ></CommonIcon>
+      ></UiIcon>
     </button>
     <ul
       v-show="isActive"
@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { VNode, h, provide, ref, onMounted } from "vue";
 import { menuInjectionKey } from "./constants";
-import CommonIcon from "../icon/UiIcon.vue";
+import UiIcon from "../icon/UiIcon.vue";
 
 interface IProps {
   modelValue: number;
