@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { VNode, h, provide, ref, onMounted } from "vue";
 import { menuInjectionKey } from "./constants";
-import CommonIcon from "../icon/CommonIcon.vue";
+import CommonIcon from "../icon/UiIcon.vue";
 
 interface IProps {
   modelValue: number;

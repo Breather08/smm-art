@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import CommonIcon from "../icon/CommonIcon.vue";
+import CommonIcon from "../icon/UiIcon.vue";
 import type { Variant } from "./types";
 
 interface Props {

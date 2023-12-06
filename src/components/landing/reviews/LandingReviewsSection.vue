@@ -20,6 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import CommonCarousel from "@/components/ui/carousel/CommonCarousel.vue";
-import CommonCarouselItem from "@/components/ui/carousel/CommonCarouselItem.vue";
+import CommonCarousel from "@/components/ui/carousel/UiCarousel.vue.js";
+import CommonCarouselItem from "@/components/ui/carousel/UiCarouselItem.vue.js";
 </script>

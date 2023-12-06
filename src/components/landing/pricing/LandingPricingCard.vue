@@ -30,9 +30,9 @@
 
 <script setup lang="ts">
 import type { PeriodPricing } from "./types";
-import CommonIcon from "@/components/ui/icon/CommonIcon.vue";
-import CommonButton from "@/components/ui/button/CommonButton.vue";
-import CommonBadge from "@/components/ui/badge/CommonBadge.vue";
+import CommonIcon from "@/components/ui/icon/UiIcon.vue";
+import CommonButton from "@/components/ui/button/UiButton.vue";
+import CommonBadge from "@/components/ui/badge/UiBadge.vue";
 
 defineProps<{ data: PeriodPricing }>();
 </script>

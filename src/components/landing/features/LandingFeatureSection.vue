@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import CommonButton from "@/components/ui/button/CommonButton.vue";
+import CommonButton from "@/components/ui/button/UiButton.vue";
 import LandingFeature from "./LandingFeature.vue";
 import { features } from "./constants";
 </script>

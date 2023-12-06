@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { onMounted, provide, ref } from "vue";
-import CommonIcon from "../icon/CommonIcon.vue";
+import CommonIcon from "../icon/UiIcon.vue";
 import { carouselInjectionKey } from "./constants";
 
 const carouselRef = ref<HTMLElement | null>(null);

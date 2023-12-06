@@ -28,8 +28,8 @@
 </template>
 
 <script setup lang="ts">
-import CommonButton from "@/components/ui/button/CommonButton.vue";
-import CommonIcon from "@/components/ui/icon/CommonIcon.vue";
+import CommonButton from "@/components/ui/button/UiButton.vue.js";
+import CommonIcon from "@/components/ui/icon/UiIcon.vue.js";
 </script>
 
 <style lang="scss"></style>

@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import CommonIcon from "@/components/ui/icon/CommonIcon.vue";
+import CommonIcon from "@/components/ui/icon/UiIcon.vue";
 import type { Feature } from "./types";
 
 defineProps<{ feature: Feature }>();

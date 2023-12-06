@@ -38,8 +38,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import CommonMenu from "@/components/ui/menu/CommonMenu.vue";
-import CommonMenuItem from "@/components/ui/menu/CommonMenuItem.vue";
+import CommonMenu from "@/components/ui/menu/UiMenu.vue";
+import CommonMenuItem from "@/components/ui/menu/UiMenuItem.vue";
 // import CommonButton from "@/components/ui/button/CommonButton.vue"
 import type { PeriodPricing } from "./types";
 import LandingPricingCard from "./LandingPricingCard.vue";
