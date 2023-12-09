@@ -5,4 +5,5 @@ export interface InputData {
   label: string;
   required?: boolean;
   type?: InputTypeHTMLAttribute;
+  message?: string;
 }

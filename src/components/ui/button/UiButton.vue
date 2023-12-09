@@ -2,10 +2,10 @@
   <button
     v-bind="$attrs"
     :class="[
-      `py-2 px-8 h-14 text-main`,
+      `py-2 px-8 h-14 text-main font-bold text-lg`,
       {
         'bg-primary text-white': variant === 'primary',
-        'bg-back-grey': variant === 'secondary',
+        'bg-back-base': variant === 'secondary',
         'bg-transparent': variant === 'plain',
         'rounded-full': rounded,
         'rounded-lg': !rounded,

@@ -61,7 +61,7 @@ function showMenu() {
 function hideMenu() {
   setTimeout(() => {
     isActive.value = false;
-  });
+  }, 100);
 }
 </script>
 

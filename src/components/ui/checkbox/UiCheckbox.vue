@@ -1,6 +1,6 @@
 <template>
   <label
-    class="checkbox block relative select-none pl-9 text-sm text-main-grey text-left"
+    class="checkbox block relative select-none pl-9 text-sm text-main-grey text-left cursor-pointer"
     style="min-height: 25px"
   >
     {{ label }}

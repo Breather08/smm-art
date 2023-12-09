@@ -17,7 +17,6 @@ const slots = useSlots();
 const { setActive, incrementCount, count, initial } = inject(menuInjectionKey);
 
 onMounted(() => {
-  console.log("on mounted");
   index.value = count.value;
   incrementCount();
   if (initial === index.value) {
