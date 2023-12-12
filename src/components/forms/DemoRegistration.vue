@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-left py-12 px-16">
+  <form class="relative text-left py-12 px-16" @submit.prevent="onSubmit">
     <h2 class="text-primary">Регистрация на демо</h2>
     <p class="text-lg mt-2 mb-6">
       Заполните форму ниже и наша служба поддержки свяжется с вами, проведет демонстрацию и ответит
@@ -25,9 +25,9 @@
         v-model="isTermsAccepted"
         label="Нажимая кнопку «Записаться», я даю свое согласие на обработку моих персональных данных*"
       />
-      <UiButton rounded class="w-64"> Submit message </UiButton>
+      <UiButton rounded class="w-64" type="submit"> Submit message </UiButton>
     </div>
-  </div>
+  </form>
 </template>
 
 <script setup lang="ts">
@@ -87,4 +87,8 @@ const formValues = reactive<Record<string, InputData>>({
     message: "",
   },
 });
+
+function onSubmit(e) {
+  console.log(e);
+}
 </script>

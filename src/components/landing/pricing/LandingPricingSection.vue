@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-secondary-light w-screen overflow-hidden pt-28 pb-16">
+  <section class="bg-secondary-light w-screen overflow-hidden pt-28">
     <UiContainer>
       <h2 class="mb-6">Попробуйте 7 дней бесплатно</h2>
       <p class="text-left text-main-grey text-lg">

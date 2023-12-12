@@ -1,6 +1,6 @@
 <template>
   <div
-    class="carousel-item inline-block"
+    class="relative inline-block"
     :style="{
       width: `${width}px`,
     }"

@@ -1,14 +1,14 @@
 <template>
-  <section class="bg-secondary-light pb-16 w-screen overflow-hidden">
+  <section class="bg-secondary-light md:bg-back-base pb-16 w-screen overflow-hidden pt-16">
     <UiContainer>
       <h2 class="mb-6 md:mb-11 lg:mb-24">О нас говорят</h2>
       <UiCarousel>
         <UiCarouselItem v-for="i in 5" :key="i" class="text-left">
           <div class="md:flex gap-9 lg:gap-24 relative items-start w-full">
             <div
-              class="w-24 h-24 md:w-48 md:h-48 lg:w-80 lg:h-80 bg-secondary rounded-full mb-6 1 min-w-fit"
+              class="w-24 h-24 md:min-w-[200px] md:min-h-[200px] lg:min-w-[316px] lg:h-[316px] bg-secondary rounded-full mb-6"
             ></div>
-            <div class="md:flex flex-col-reverse md:w-2/3 lg:w-1/2 xl:w-2/3">
+            <div class="md:flex flex-col-reverse">
               <div>
                 <h4 class="text-lg font-bold lg:text-2xl">Максат Атыбаев</h4>
                 <sub class="text-base text-main-grey">СММ-специалист в Glovo</sub>
@@ -33,4 +33,9 @@
 import UiCarousel from "@/components/ui/carousel/UiCarousel.vue";
 import UiCarouselItem from "@/components/ui/carousel/UiCarouselItem.vue";
 import UiContainer from "@/components/ui/container/UiContainer.vue";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "@/../tailwind.config";
+
+const fullConfig = resolveConfig(tailwindConfig);
+console.log(fullConfig.theme.screens);
 </script>

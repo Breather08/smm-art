@@ -7,12 +7,16 @@
     <LandingFeature></LandingFeature>
     <LandingPricing></LandingPricing>
     <LandingReviews></LandingReviews>
+    <LandingBanner></LandingBanner>
+    <LandingFooter></LandingFooter>
   </main>
 </template>
 
 <script setup lang="ts">
+import LandingBanner from "./components/landing/banner/LandingBanner.vue";
 import LandingClients from "./components/landing/clients/LandingClients.vue";
 import LandingFeature from "./components/landing/features/LandingFeatureSection.vue";
+import LandingFooter from "./components/landing/footer/LandingFooter.vue";
 import LandingIntro from "./components/landing/intro/LandingIntroSection.vue";
 import LandingOpportunities from "./components/landing/opportunities/LandingOpportunities.vue";
 import LandingPricing from "./components/landing/pricing/LandingPricingSection.vue";
