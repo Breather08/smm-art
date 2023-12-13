@@ -35,5 +35,7 @@ const iconSrc = computed(() => `/src/assets/icons/i-${props.name}.svg`);
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
 }
 </style>

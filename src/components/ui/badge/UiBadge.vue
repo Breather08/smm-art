@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-md font-normal md:font-bold text-main inline px-4 py-2"
+    class="rounded-md font-bold text-main inline px-4 py-2"
     :class="{
       'bg-accent': variant === 'primary',
     }"

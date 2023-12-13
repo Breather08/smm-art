@@ -23,7 +23,7 @@
           <span class="text-2xl font-bold text-left">Скачайте прямо сейчас</span>
           <div class="flex gap-4 mt-7">
             <img src="@/assets/landing/img/app_store_link.png" />
-            <img src="@/assets/landing/img/play_store_link.png" />
+            <img src="@/assets/landing/img/play_store_link.png" class="mt-1" />
           </div>
         </div>
         <a href="" class="text-main-grey text-lg underline underline-offset-4">

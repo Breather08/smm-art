@@ -8,7 +8,7 @@
   >
     <div class="flex justify-between flex-wrap gap-3 lg:flex-col-reverse">
       <h3 class="text-3xl font-bold">{{ data.title }}</h3>
-      <UiBadge v-if="data.isMostPopular" class="grow-0 w-fit">ВЫГОДНО</UiBadge>
+      <UiBadge v-if="data.isMostPopular" class="grow-0 w-fit font-bold">ВЫГОДНО</UiBadge>
     </div>
     <div class="flex flex-start my-8">
       <em class="text-4xl font-bold mr-1">{{ data.sum }} </em>

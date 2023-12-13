@@ -22,7 +22,13 @@
       </div>
     </UiContainer>
   </header>
-  <UiNavigationDrawer></UiNavigationDrawer>
+  <UiNavigationDrawer v-model="isDrawerVisible">
+    <div class="flex flex-col gap-4 justify-end xl:justify-center grow">
+      <a v-for="link in links" :key="link.text" :href="link.url" class="h-min">
+        {{ link.text }}
+      </a>
+    </div>
+  </UiNavigationDrawer>
 </template>
 
 <script setup lang="ts">
@@ -31,6 +37,7 @@ import UiContainer from "@/components/ui/container/UiContainer.vue";
 import UiNavigationDrawer from "../navigation-drawer/UiNavigationDrawer.vue";
 import type { Link } from "./types";
 import UiButton from "../button/UiButton.vue";
+import { ref } from "vue";
 
 interface IProps {
   links: Link[];
@@ -38,7 +45,10 @@ interface IProps {
 
 defineProps<IProps>();
 
+const isDrawerVisible = ref(false);
+
 function showNav() {
   console.log("show drawer");
+  isDrawerVisible.value = true;
 }
 </script>

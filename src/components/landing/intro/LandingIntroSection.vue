@@ -12,7 +12,7 @@
             клик
           </p>
           <div class="flex justify-between flex-col xl:flex-row gap-4">
-            <UiButton rounded class="mb-4"> Попробовать бесплатно </UiButton>
+            <UiButton rounded> Попробовать бесплатно </UiButton>
             <UiButton variant="secondary" rounded> Запись на демонстрацию </UiButton>
           </div>
           <div class="flex justify-between lg:justify-start lg:gap-12">
@@ -26,8 +26,8 @@
             </div>
           </div>
         </div>
-        <div class="relative grow w-full h-64 md:h-full">
-          <div class="h-full bg-main-grey rounded-lg">Replace for img later</div>
+        <div class="relative grow w-full h-64 md:h-96">
+          <div class="h-full bg-main-grey rounded-lg"></div>
         </div>
       </div>
     </UiContainer>

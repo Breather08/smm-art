@@ -7,9 +7,9 @@
     }"
   >
     <div class="absolute top-0 left-0 bottom-0 right-0 flex justify-center">
-      <div class="h-full w-10/12 xs:w-full">
+      <div class="h-full w-10/12 xs:w-full lg:px-10">
         <div
-          class="h-full w-full bg-top bg-contain bg-no-repeat"
+          class="h-full w-full bg-top bg-contain bg-no-repeat transition-opacity ease-out"
           :style="{
             opacity: isInfoExtended ? '0.3' : '1',
             backgroundImage: `url(${opportunity.img})`,
