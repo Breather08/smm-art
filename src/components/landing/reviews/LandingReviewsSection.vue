@@ -33,9 +33,4 @@
 import UiCarousel from "@/components/ui/carousel/UiCarousel.vue";
 import UiCarouselItem from "@/components/ui/carousel/UiCarouselItem.vue";
 import UiContainer from "@/components/ui/container/UiContainer.vue";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "@/../tailwind.config";
-
-const fullConfig = resolveConfig(tailwindConfig);
-console.log(fullConfig.theme.screens);
 </script>

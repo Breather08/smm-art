@@ -8,11 +8,8 @@
 import { useSlots, inject, onMounted, ref } from "vue";
 import { menuInjectionKey } from "./constants";
 
-interface IProps {}
-
 const index = ref(0);
 
-defineProps<IProps>();
 const slots = useSlots();
 const { setActive, incrementCount, count, initial } = inject(menuInjectionKey);
 

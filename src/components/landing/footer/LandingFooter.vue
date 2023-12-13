@@ -15,7 +15,7 @@
         <a href="" class="underline underline-offset-4 mb-10">Запись на демо</a>
         <span class="font-bold">Контакты</span>
         <div class="flex gap-6 -mt-3">
-          <UiIcon name="contacts-temp" size="141" color="#606060" />
+          <UiIcon name="contacts-temp" :size="141" color="#606060" />
         </div>
       </div>
       <div class="flex flex-col-reverse md:flex-col items-start">

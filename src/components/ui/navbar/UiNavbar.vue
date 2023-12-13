@@ -48,7 +48,6 @@ defineProps<IProps>();
 const isDrawerVisible = ref(false);
 
 function showNav() {
-  console.log("show drawer");
   isDrawerVisible.value = true;
 }
 </script>
